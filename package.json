@@ -15,8 +15,11 @@
         "vite": "^4.0.0"
     },
     "dependencies": {
+        "@popperjs/core": "^2.11.7",
         "@vitejs/plugin-vue": "^4.2.3",
-        "vue": "^3.2.36",
+        "bootstrap": "^5.2.3",
+        "bootstrap-vue": "^2.23.1",
+        "vue": "^3.3.4",
         "vue-loader": "^17.0.1",
         "vue-router": "^4.2.1",
         "vuetify": "^3.3.0"
