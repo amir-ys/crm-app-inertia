@@ -1,6 +1,6 @@
 <template>
     <div>
-        login page
+        صفحه ورود
     </div>
 </template>
 <script>

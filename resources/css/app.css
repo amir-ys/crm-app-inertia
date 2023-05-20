@@ -1,0 +1,10 @@
+
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import "node_modules/@mdi/font/css/materialdesignicons.min.css";
+
+@import "node_modules/vuetify/dist/vuetify.min.css";
+
+import
+body .v-application {
+    font-family: Vazir, ui-serif !important;
+}

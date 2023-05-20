@@ -1,6 +1,6 @@
 <template>
     <div>
-        register page
+        صفحه رجیستر
     </div>
 </template>
 <script>
