@@ -1,10 +1,11 @@
 <template>
-   <div class="container">
-       <div class="row">
-           text
-           تست تایپ فارسی
-       </div>
-   </div>
+    <b-container>
+        <b-row>
+            <div>e</div>
+            <div>refd</div>
+            <div></div>
+        </b-row>
+    </b-container>
 </template>
 
 <script>
@@ -60,7 +61,4 @@ export default {
 </script>
 
 <style>
-.v-toolbar__content {
-    padding: 0 !important;
-}
 </style>
