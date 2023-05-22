@@ -1,5 +1,5 @@
 <template>
-    <h1>Home Page</h1>
+    <h1>Settings Page</h1>
     <Nav></Nav>
 </template>
 <script>
