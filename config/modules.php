@@ -30,10 +30,6 @@ return [
         'path' => base_path('stubs'),
         'files' => [
             'routes/web' => 'Routes/web.php',
-            'routes/api' => 'Routes/api.php',
-            'views/index' => 'Resources/views/index.blade.php',
-            'views/master' => 'Resources/views/layouts/master.blade.php',
-            'scaffold/config' => 'Config/config.php',
             'composer' => 'composer.json',
         ],
         'replacements' => [
@@ -99,10 +95,10 @@ return [
         'generator' => [
             'config' => ['path' => 'Config', 'generate' => false],
             'command' => ['path' => 'Console', 'generate' => false],
-            'migration' => ['path' => 'Database/Migrations', 'generate' => true],
+            'migration' => ['path' => 'Database/Migrations', 'generate' => false],
             'seeder' => ['path' => 'Database/Seeders', 'generate' => false],
-            'factory' => ['path' => 'Database/factories', 'generate' => true],
-            'model' => ['path' => 'Entities', 'generate' => true],
+            'factory' => ['path' => 'Database/factories', 'generate' => false],
+            'model' => ['path' => 'Entities', 'generate' => false],
             'routes' => ['path' => 'Routes', 'generate' => true],
             'controller' => ['path' => 'Http/Controllers', 'generate' => true],
             'filter' => ['path' => 'Http/Middleware', 'generate' => false],
@@ -112,7 +108,7 @@ return [
             'lang' => ['path' => 'Resources/lang', 'generate' => false],
             'views' => ['path' => 'Resources/views', 'generate' => true],
             'test' => ['path' => 'Tests/Unit', 'generate' => false],
-            'test-feature' => ['path' => 'Tests/Feature', 'generate' => true],
+            'test-feature' => ['path' => 'Tests/Feature', 'generate' => false],
             'repository' => ['path' => 'Repositories', 'generate' => false],
             'event' => ['path' => 'Events', 'generate' => false],
             'listener' => ['path' => 'Listeners', 'generate' => false],
