@@ -26,8 +26,8 @@ return [
     */
 
     'stubs' => [
-        'enabled' => false,
-        'path' => base_path('stubs'),
+        'enabled' => true,
+        'path' => base_path('stubs/amir-ys-stubs'),
         'files' => [
             'routes/web' => 'Routes/web.php',
             'composer' => 'composer.json',
