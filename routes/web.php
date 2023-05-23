@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,9 +11,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/' , function () {
-    return \Inertia\Inertia::render('Home',
-    [
-        'name' => 'amir'
-    ]);
-});
+
