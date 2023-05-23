@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\Core\Providers;
+namespace Modules\Theme\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -13,18 +13,6 @@ class ThemeServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        $this->registerProviders();
-    }
-
-
-    /**
-     * Register providers
-     *
-     * @return void
-     */
-    protected function registerProviders(): void
-    {
-        $this->app->register("Modules\\Core\\Providers\\ModuleServiceProvider");
-        $this->app->register("Modules\\Core\\Providers\\ModuleRouteServiceProvider");
+        $this->loadViewsFrom(__DIR__ . '/../Resources/views' , 'Theme');
     }
 }

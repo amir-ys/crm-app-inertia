@@ -160,6 +160,12 @@ return [
          * Package Service Providers...
          */
 
+
+        /*
+       * module Service Providers...
+       */
+        \Modules\Theme\Providers\ThemeServiceProvider::class,
+
         /*
          * Application Service Providers...
          */
