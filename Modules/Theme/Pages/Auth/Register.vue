@@ -5,8 +5,6 @@ import {defineComponent} from "vue";
 
 const props = defineComponent({ValidationError})
 
-defineProps({ errors: Object })
-
 const form = useForm({
     first_name: null,
     last_name: null,
@@ -14,8 +12,6 @@ const form = useForm({
     password: null,
     password_confirmation: null,
 })
-
-console.log(form.errors)
 
 </script>
 
@@ -37,21 +33,25 @@ console.log(form.errors)
                                 <label for="first_name" class="col-form-label">نام</label>
                                 <input name="first_name" v-model="form.first_name" type="text"
                                        class="form-control"
+                                       :class="{ 'is-invalid' : form.errors.first_name }"
                                        placeholder="نام" autocomplete="first_name" autofocus>
                             </div>
+                            <validation-error :field="form.errors.first_name" />
 
                             <div class="fv-row">
                                 <label for="last_name" class="col-form-label">نام خانوادگی</label>
                                 <input name="last_name" v-model="form.last_name" type="text"
                                        class="form-control "
+                                       :class="{ 'is-invalid' : form.errors.last_name }"
                                        placeholder="نام خانوادگی" autocomplete="last_name">
                             </div>
+                            <validation-error :field="form.errors.last_name" />
 
                             <div class="fv-row">
                                 <label for="email" class="col-form-label">ایمیل</label>
                                 <input name="email" v-model="form.email" type="text"
                                        class="form-control"
-                                       v-bind:class="{ 'is-invalid' : form.errors.email  }"
+                                       :class="{ 'is-invalid' : form.errors.email  }"
                                        placeholder="ایمیل" autocomplete="email">
                             </div>
                             <validation-error :field="form.errors.email" />
@@ -64,6 +64,7 @@ console.log(form.errors)
                                     <input type="password" name="password" v-model="form.password"
                                            class="form-control"
                                            id="password" placeholder="کلمه عبور"
+                                           :class="{ 'is-invalid' : form.errors.password }"
                                            aria-label="Password" aria-describedby="password-addon">
                                     <button class="btn btn-light btn-sm toggle-password" type="button"
                                             id="password-addon"><i
@@ -78,22 +79,18 @@ console.log(form.errors)
                                     <input type="password" name="password_confirmation"
                                            v-model="form.password_confirmation"
                                            class="form-control"
-                                           id="password_confirmation" placeholder="تکرار کلمه عبور"
-                                           aria-label="Password" aria-describedby="password-addon">
+                                           :class="{ 'is-invalid' : form.errors.password_confirmation }"
+                                           id="password_confirmation" placeholder="تکرار کلمه عبور">
+
                                     <button class="btn btn-light btn-sm toggle-password" type="button"
                                             id="password-addon"><i
                                         class="fas fa-eye fa-eye-slash" id="eye-icon"></i></button>
                                 </div>
                             </div>
 
+                            <validation-error :field="form.errors.password" />
+                            <validation-error :field="form.errors.password_confirmation" />
 
-                            <div class="form-check mb-md-5">
-                                <input class="form-check-input" type="checkbox" name="remember" v-model="form.remember"
-                                       id="remember">
-                                <label class="form-check-label" for="remember">
-                                    مرا به خاطر بسپار
-                                </label>
-                            </div>
                             <!--end::Input group=-->
                             <!--begin::Submit button-->
                             <div class="d-grid mb-10 ">
