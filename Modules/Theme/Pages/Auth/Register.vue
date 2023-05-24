@@ -1,5 +1,5 @@
 <script setup>
-import { useForm} from '@inertiajs/vue3'
+import { useForm , Link} from '@inertiajs/vue3'
 import ValidationError from "../Shared/validation-error.vue";
 import {defineComponent} from "vue";
 
@@ -100,6 +100,15 @@ const form = useForm({
                                     <!--end::Indicator label-->
                                 </button>
                             </div>
+
+                            <div class="text-center">
+                                اکانت دارید؟
+                                <span class="text-danger">
+                                    <Link href="/login"> ورود </Link>
+                                </span>
+                                کنید
+                            </div>
+
                         </form>
                     </div>
                 </div>
