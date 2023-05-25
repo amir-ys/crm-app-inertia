@@ -1,5 +1,6 @@
 {
     "Core": true,
     "User": true,
-    "Auth": true
+    "Auth": true,
+    "Shared": true
 }
