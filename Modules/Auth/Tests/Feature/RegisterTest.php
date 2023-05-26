@@ -12,9 +12,6 @@ uses(RefreshDatabase::class);
  */
 uses(TestCase::class);
 
-it('performs sums', function () {
-    $result = 3;
-
-    expect($result)->toBe(3);
+it('test register page can be rendered', function () {
+    $this->get(route('auth.register'))->assertOk();
 });
-
