@@ -1,6 +1,6 @@
 <template>
     <Layout>
-
+        tets
     </Layout>
 </template>
 <script setup>
