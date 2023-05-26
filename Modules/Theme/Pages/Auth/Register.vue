@@ -1,5 +1,5 @@
 <script setup>
-import { useForm , Link} from '@inertiajs/vue3'
+import {Link, useForm} from '@inertiajs/vue3'
 import ValidationError from "../Shared/ValidationError.vue";
 import {defineComponent} from "vue";
 
@@ -22,12 +22,17 @@ const form = useForm({
             <div class="d-flex flex-column-fluid flex-lg-row-auto justify-content-center justify-content-lg-end p-12">
                 <div class="bg-body d-flex flex-center rounded-4 w-md-600px p-10">
                     <div class="w-md-400px">
+                        <div class="text-center mb-11">
+                            <h1 class="text-dark fw-bolder mb-3">ثبت نام</h1>
+                        </div>
+
+                        <div v-if="form.errors" v-for="error in form.errors" class="alert alert-danger">
+                            {{ error }}
+                        </div>
+
                         <form class="form w-100"
                               @submit.prevent="form.post('register')"
                               id="kt_sign_in_form">
-                            <div class="text-center mb-11">
-                                <h1 class="text-dark fw-bolder mb-3">ثبت نام</h1>
-                            </div>
 
                             <div class="fv-row">
                                 <label for="first_name" class="col-form-label">نام</label>
@@ -36,7 +41,6 @@ const form = useForm({
                                        :class="{ 'is-invalid' : form.errors.first_name }"
                                        placeholder="نام" autocomplete="first_name" autofocus>
                             </div>
-                            <validation-error :field="form.errors.first_name" />
 
                             <div class="fv-row">
                                 <label for="last_name" class="col-form-label">نام خانوادگی</label>
@@ -45,7 +49,6 @@ const form = useForm({
                                        :class="{ 'is-invalid' : form.errors.last_name }"
                                        placeholder="نام خانوادگی" autocomplete="last_name">
                             </div>
-                            <validation-error :field="form.errors.last_name" />
 
                             <div class="fv-row">
                                 <label for="email" class="col-form-label">ایمیل</label>
@@ -54,7 +57,6 @@ const form = useForm({
                                        :class="{ 'is-invalid' : form.errors.email  }"
                                        placeholder="ایمیل" autocomplete="email">
                             </div>
-                            <validation-error :field="form.errors.email" />
 
 
                             <div class="fv-row mb-md-5">
@@ -88,9 +90,6 @@ const form = useForm({
                                 </div>
                             </div>
 
-                            <validation-error :field="form.errors.password" />
-                            <validation-error :field="form.errors.password_confirmation" />
-
                             <!--end::Input group=-->
                             <!--begin::Submit button-->
                             <div class="d-grid mb-10 ">
@@ -115,8 +114,6 @@ const form = useForm({
             </div>
             <div class="d-flex flex-lg-row-fluid">
                 <div class="d-flex flex-column flex-center pb-0 pb-lg-10 p-10 w-100">
-                    <img class="theme-light-show mx-auto mw-100 w-150px w-lg-300px mb-10 mb-lg-20"
-                         src="/metro/assets/media/auth/agency.png" alt=""/>
                     <img class="theme-dark-show mx-auto mw-100 w-150px w-lg-300px mb-10 mb-lg-20"
                          src="/metro/assets/media/auth/agency-dark.png" alt=""/>
                     <h1 class="text-gray-800 fs-2qx fw-bold text-center mb-7">سامانه مدیریت مشتریان</h1>

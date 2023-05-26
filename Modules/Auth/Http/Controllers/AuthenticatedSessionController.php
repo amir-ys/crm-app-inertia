@@ -4,6 +4,7 @@ namespace Modules\Auth\Http\Controllers;
 
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Request;
 use Illuminate\Validation\ValidationException;
 use Inertia\Inertia;
 use Modules\Auth\Http\Requests\LoginRequest;
@@ -27,5 +28,12 @@ AuthenticatedSessionController extends Controller
         $request->session()->regenerate();
 
         return Inertia::render('Home');
+    }
+
+    public function destroy(Request $request)
+    {
+        Auth::guard('web')->logout();
+
+        return Inertia::render('Auth/Login');
     }
 }

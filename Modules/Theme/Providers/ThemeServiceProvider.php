@@ -13,6 +13,6 @@ class ThemeServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        $this->loadViewsFrom(__DIR__ . '/../Resources/views' , 'Theme');
+        $this->loadViewsFrom(__DIR__ . '/../Resources/views', 'Theme');
     }
 }

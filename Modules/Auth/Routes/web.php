@@ -7,15 +7,20 @@ use Modules\Auth\Http\Controllers\RegisterController;
 
 Route::middleware('guest')->group(function () {
     //register
-    Route::get('register', [RegisterController::class, 'create']);
-    Route::post('register', [RegisterController::class, 'store']);
+    Route::get('register', [RegisterController::class, 'create'])->name('auth.showRegisterForm');
+    Route::post('register', [RegisterController::class, 'store'])->name('auth.register');
 
     //login
-    Route::get('login', [AuthenticatedSessionController::class, 'create']);
-    Route::post('login', [AuthenticatedSessionController::class, 'store'])->middleware('throttle:5,1');
+    Route::get('login', [AuthenticatedSessionController::class, 'create'])->name('auth.showLoginForm');
+    Route::post('login', [AuthenticatedSessionController::class, 'store'])
+        ->name('auth.login');
+//        ->middleware('throttle:5,1');
+
 });
 
+Route::middleware('auth')->group(function () {
 
-Route::get('home2' , function (){
-   return \Inertia\Inertia::render('Home');
+    //logout
+    Route::any('logout', [AuthenticatedSessionController::class, 'destroy'])->name('auth.logout');
+
 });
