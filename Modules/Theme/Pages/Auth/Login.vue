@@ -1,6 +1,6 @@
 <script setup>
 import { useForm , Link} from '@inertiajs/vue3'
-import ValidationError from "../Shared/validation-error.vue";
+import ValidationError from "../Shared/ValidationError.vue";
 import {defineComponent} from "vue";
 
 const props = defineComponent({ValidationError})

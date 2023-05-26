@@ -1,9 +1,8 @@
 <template>
-    <h1>Home Page</h1>
-    <Nav></Nav>
-</template>
-<script>
-export  default {
+    <Layout>
 
-}
+    </Layout>
+</template>
+<script setup>
+import Layout from '../Pages/Shared/Layout.vue'
 </script>
