@@ -1,15 +1,12 @@
 <template>
-    <div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
-        <div id="kt_header" class="header header-fixed">
-            <div class="container-fluid d-flex align-items-stretch justify-content-between">
-                <div class="header-menu-wrapper header-menu-wrapper-left" id="kt_header_menu_wrapper">
-                    <div id="kt_header_menu" class="header-menu header-menu-mobile header-menu-layout-default">
-                    </div>
-                </div>
-                <div class="topbar">
-                    <div class="dropdown" id="kt_quick_search_toggle">
-                        <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
-                            <div class="btn btn-icon btn-clean btn-lg btn-dropdown mr-1">
+    <div id="kt_header" class="header header-fixed">
+        <div class="container-fluid d-flex align-items-stretch justify-content-between">
+            <div class="header-menu-wrapper header-menu-wrapper-left" id="kt_header_menu_wrapper">
+            </div>
+            <div class="topbar">
+                <div class="dropdown" id="kt_quick_search_toggle">
+                    <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
+                        <div class="btn btn-icon btn-clean btn-lg btn-dropdown mr-1">
 											<span class="svg-icon svg-icon-xl svg-icon-primary">
 												<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
 													<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -19,13 +16,13 @@
 													</g>
 												</svg>
 											</span>
-                            </div>
                         </div>
-                        <div class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-anim-up dropdown-menu-lg">
-                            <div class="quick-search quick-search-dropdown" id="kt_quick_search_dropdown">
-                                <form method="get" class="quick-search-form">
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
+                    </div>
+                    <div class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-anim-up dropdown-menu-lg">
+                        <div class="quick-search quick-search-dropdown" id="kt_quick_search_dropdown">
+                            <form method="get" class="quick-search-form">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
 														<span class="input-group-text">
 															<span class="svg-icon svg-icon-lg">
 																<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -37,22 +34,22 @@
 																</svg>
 															</span>
 														</span>
-                                        </div>
-                                        <input type="text" class="form-control" placeholder="Search..." />
-                                        <div class="input-group-append">
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Search..." />
+                                    <div class="input-group-append">
 														<span class="input-group-text">
 															<i class="quick-search-close ki ki-close icon-sm text-muted"></i>
 														</span>
-                                        </div>
                                     </div>
-                                </form>
-                                <div class="quick-search-wrapper scroll" data-scroll="true" data-height="325" data-mobile-height="200"></div>
-                            </div>
+                                </div>
+                            </form>
+                            <div class="quick-search-wrapper scroll" data-scroll="true" data-height="325" data-mobile-height="200"></div>
                         </div>
                     </div>
-                    <div class="dropdown">
-                        <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
-                            <div class="btn btn-icon btn-clean btn-dropdown btn-lg mr-1 pulse pulse-primary">
+                </div>
+                <div class="dropdown">
+                    <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
+                        <div class="btn btn-icon btn-clean btn-dropdown btn-lg mr-1 pulse pulse-primary">
 											<span class="svg-icon svg-icon-xl svg-icon-primary">
 												<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
 													<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -62,33 +59,33 @@
 													</g>
 												</svg>
 											</span>
-                                <span class="pulse-ring"></span>
-                            </div>
+                            <span class="pulse-ring"></span>
                         </div>
-                        <div class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-anim-up dropdown-menu-lg">
-                            <form>
-                                <div class="d-flex flex-column pt-12 bgi-size-cover bgi-no-repeat rounded-top" style="background-image: url(assets/media/misc/bg-1.jpg)">
-                                    <h4 class="d-flex flex-center rounded-top">
-                                        <span class="text-white">User Notifications</span>
-                                        <span class="btn btn-text btn-success btn-sm font-weight-bold btn-font-md ml-2">23 new</span>
-                                    </h4>
-                                    <ul class="nav nav-bold nav-tabs nav-tabs-line nav-tabs-line-3x nav-tabs-line-transparent-white nav-tabs-line-active-border-success mt-3 px-8" role="tablist">
-                                        <li class="nav-item">
-                                            <a class="nav-link active show" data-toggle="tab" href="#topbar_notifications_notifications">Alerts</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" data-toggle="tab" href="#topbar_notifications_events">Events</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" data-toggle="tab" href="#topbar_notifications_logs">Logs</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="tab-content">
-                                    <div class="tab-pane active show p-8" id="topbar_notifications_notifications" role="tabpanel">
-                                        <div class="scroll pr-7 mr-n7" data-scroll="true" data-height="300" data-mobile-height="200">
-                                            <div class="d-flex align-items-center mb-6">
-                                                <div class="symbol symbol-40 symbol-light-primary mr-5">
+                    </div>
+                    <div class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-anim-up dropdown-menu-lg">
+                        <form>
+                            <div class="d-flex flex-column pt-12 bgi-size-cover bgi-no-repeat rounded-top" style="background-image: url(assets/media/misc/bg-1.jpg)">
+                                <h4 class="d-flex flex-center rounded-top">
+                                    <span class="text-white">User Notifications</span>
+                                    <span class="btn btn-text btn-success btn-sm font-weight-bold btn-font-md ml-2">23 new</span>
+                                </h4>
+                                <ul class="nav nav-bold nav-tabs nav-tabs-line nav-tabs-line-3x nav-tabs-line-transparent-white nav-tabs-line-active-border-success mt-3 px-8" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active show" data-toggle="tab" href="#topbar_notifications_notifications">Alerts</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#topbar_notifications_events">Events</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#topbar_notifications_logs">Logs</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-pane active show p-8" id="topbar_notifications_notifications" role="tabpanel">
+                                    <div class="scroll pr-7 mr-n7" data-scroll="true" data-height="300" data-mobile-height="200">
+                                        <div class="d-flex align-items-center mb-6">
+                                            <div class="symbol symbol-40 symbol-light-primary mr-5">
 																<span class="symbol-label">
 																	<span class="svg-icon svg-icon-lg svg-icon-primary">
 																		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -100,14 +97,14 @@
 																		</svg>
 																	</span>
 																</span>
-                                                </div>
-                                                <div class="d-flex flex-column font-weight-bold">
-                                                    <a href="#" class="text-dark text-hover-primary mb-1 font-size-lg">Cool App</a>
-                                                    <span class="text-muted">Marketing campaign planning</span>
-                                                </div>
                                             </div>
-                                            <div class="d-flex align-items-center mb-6">
-                                                <div class="symbol symbol-40 symbol-light-warning mr-5">
+                                            <div class="d-flex flex-column font-weight-bold">
+                                                <a href="#" class="text-dark text-hover-primary mb-1 font-size-lg">Cool App</a>
+                                                <span class="text-muted">Marketing campaign planning</span>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center mb-6">
+                                            <div class="symbol symbol-40 symbol-light-warning mr-5">
 																<span class="symbol-label">
 																	<span class="svg-icon svg-icon-lg svg-icon-warning">
 																		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -119,14 +116,14 @@
 																		</svg>
 																	</span>
 																</span>
-                                                </div>
-                                                <div class="d-flex flex-column font-weight-bold">
-                                                    <a href="#" class="text-dark-75 text-hover-primary mb-1 font-size-lg">Awesome SAAS</a>
-                                                    <span class="text-muted">Project status update meeting</span>
-                                                </div>
                                             </div>
-                                            <div class="d-flex align-items-center mb-6">
-                                                <div class="symbol symbol-40 symbol-light-success mr-5">
+                                            <div class="d-flex flex-column font-weight-bold">
+                                                <a href="#" class="text-dark-75 text-hover-primary mb-1 font-size-lg">Awesome SAAS</a>
+                                                <span class="text-muted">Project status update meeting</span>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center mb-6">
+                                            <div class="symbol symbol-40 symbol-light-success mr-5">
 																<span class="symbol-label">
 																	<span class="svg-icon svg-icon-lg svg-icon-success">
 																		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -138,14 +135,14 @@
 																		</svg>
 																	</span>
 																</span>
-                                                </div>
-                                                <div class="d-flex flex-column font-weight-bold">
-                                                    <a href="#" class="text-dark text-hover-primary mb-1 font-size-lg">Claudy Sys</a>
-                                                    <span class="text-muted">Project Deployment &amp; Launch</span>
-                                                </div>
                                             </div>
-                                            <div class="d-flex align-items-center mb-6">
-                                                <div class="symbol symbol-40 symbol-light-danger mr-5">
+                                            <div class="d-flex flex-column font-weight-bold">
+                                                <a href="#" class="text-dark text-hover-primary mb-1 font-size-lg">Claudy Sys</a>
+                                                <span class="text-muted">Project Deployment &amp; Launch</span>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center mb-6">
+                                            <div class="symbol symbol-40 symbol-light-danger mr-5">
 																<span class="symbol-label">
 																	<span class="svg-icon svg-icon-lg svg-icon-danger">
 																		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -159,14 +156,14 @@
 																		</svg>
 																	</span>
 																</span>
-                                                </div>
-                                                <div class="d-flex flex-column font-weight-bold">
-                                                    <a href="#" class="text-dark text-hover-primary mb-1 font-size-lg">Trilo Service</a>
-                                                    <span class="text-muted">Analytics &amp; Requirement Study</span>
-                                                </div>
                                             </div>
-                                            <div class="d-flex align-items-center mb-6">
-                                                <div class="symbol symbol-40 symbol-light-info mr-5">
+                                            <div class="d-flex flex-column font-weight-bold">
+                                                <a href="#" class="text-dark text-hover-primary mb-1 font-size-lg">Trilo Service</a>
+                                                <span class="text-muted">Analytics &amp; Requirement Study</span>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center mb-6">
+                                            <div class="symbol symbol-40 symbol-light-info mr-5">
 																<span class="symbol-label">
 																	<span class="svg-icon svg-icon-lg svg-icon-info">
 																		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -179,14 +176,14 @@
 																		</svg>
 																	</span>
 																</span>
-                                                </div>
-                                                <div class="d-flex flex-column font-weight-bold">
-                                                    <a href="#" class="text-dark text-hover-primary mb-1 font-size-lg">Bravia SAAS</a>
-                                                    <span class="text-muted">Reporting Application</span>
-                                                </div>
                                             </div>
-                                            <div class="d-flex align-items-center mb-6">
-                                                <div class="symbol symbol-40 symbol-light-danger mr-5">
+                                            <div class="d-flex flex-column font-weight-bold">
+                                                <a href="#" class="text-dark text-hover-primary mb-1 font-size-lg">Bravia SAAS</a>
+                                                <span class="text-muted">Reporting Application</span>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center mb-6">
+                                            <div class="symbol symbol-40 symbol-light-danger mr-5">
 																<span class="symbol-label">
 																	<span class="svg-icon svg-icon-lg svg-icon-danger">
 																		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -198,14 +195,14 @@
 																		</svg>
 																	</span>
 																</span>
-                                                </div>
-                                                <div class="d-flex flex-column font-weight-bold">
-                                                    <a href="#" class="text-dark text-hover-primary mb-1 font-size-lg">Express Wind</a>
-                                                    <span class="text-muted">Software Analytics &amp; Design</span>
-                                                </div>
                                             </div>
-                                            <div class="d-flex align-items-center mb-6">
-                                                <div class="symbol symbol-40 symbol-light-success mr-5">
+                                            <div class="d-flex flex-column font-weight-bold">
+                                                <a href="#" class="text-dark text-hover-primary mb-1 font-size-lg">Express Wind</a>
+                                                <span class="text-muted">Software Analytics &amp; Design</span>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center mb-6">
+                                            <div class="symbol symbol-40 symbol-light-success mr-5">
 																<span class="symbol-label">
 																	<span class="svg-icon svg-icon-lg svg-icon-success">
 																		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -217,185 +214,185 @@
 																		</svg>
 																	</span>
 																</span>
-                                                </div>
-                                                <div class="d-flex flex-column font-weight-bold">
-                                                    <a href="#" class="text-dark text-hover-primary mb-1 font-size-lg">Bruk Fitness</a>
-                                                    <span class="text-muted">Web Design &amp; Development</span>
-                                                </div>
+                                            </div>
+                                            <div class="d-flex flex-column font-weight-bold">
+                                                <a href="#" class="text-dark text-hover-primary mb-1 font-size-lg">Bruk Fitness</a>
+                                                <span class="text-muted">Web Design &amp; Development</span>
                                             </div>
                                         </div>
-                                        <div class="d-flex flex-center pt-7">
-                                            <a href="#" class="btn btn-light-primary font-weight-bold text-center">See All</a>
-                                        </div>
                                     </div>
-                                    <div class="tab-pane" id="topbar_notifications_events" role="tabpanel">
-                                        <div class="navi navi-hover scroll my-4" data-scroll="true" data-height="300" data-mobile-height="200">
-                                            <a href="#" class="navi-item">
-                                                <div class="navi-link">
-                                                    <div class="navi-icon mr-2">
-                                                        <i class="flaticon2-line-chart text-success"></i>
-                                                    </div>
-                                                    <div class="navi-text">
-                                                        <div class="font-weight-bold">New report has been received</div>
-                                                        <div class="text-muted">23 hrs ago</div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <a href="#" class="navi-item">
-                                                <div class="navi-link">
-                                                    <div class="navi-icon mr-2">
-                                                        <i class="flaticon2-paper-plane text-danger"></i>
-                                                    </div>
-                                                    <div class="navi-text">
-                                                        <div class="font-weight-bold">Finance report has been generated</div>
-                                                        <div class="text-muted">25 hrs ago</div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <a href="#" class="navi-item">
-                                                <div class="navi-link">
-                                                    <div class="navi-icon mr-2">
-                                                        <i class="flaticon2-user flaticon2-line- text-success"></i>
-                                                    </div>
-                                                    <div class="navi-text">
-                                                        <div class="font-weight-bold">New order has been received</div>
-                                                        <div class="text-muted">2 hrs ago</div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <a href="#" class="navi-item">
-                                                <div class="navi-link">
-                                                    <div class="navi-icon mr-2">
-                                                        <i class="flaticon2-pin text-primary"></i>
-                                                    </div>
-                                                    <div class="navi-text">
-                                                        <div class="font-weight-bold">New customer is registered</div>
-                                                        <div class="text-muted">3 hrs ago</div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <a href="#" class="navi-item">
-                                                <div class="navi-link">
-                                                    <div class="navi-icon mr-2">
-                                                        <i class="flaticon2-sms text-danger"></i>
-                                                    </div>
-                                                    <div class="navi-text">
-                                                        <div class="font-weight-bold">Application has been approved</div>
-                                                        <div class="text-muted">3 hrs ago</div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <a href="#" class="navi-item">
-                                                <div class="navi-link">
-                                                    <div class="navi-icon mr-2">
-                                                        <i class="flaticon2-pie-chart-3 text-warning"></i>
-                                                    </div>
-                                                    <div class="navinavinavi-text">
-                                                        <div class="font-weight-bold">New file has been uploaded</div>
-                                                        <div class="text-muted">5 hrs ago</div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <a href="#" class="navi-item">
-                                                <div class="navi-link">
-                                                    <div class="navi-icon mr-2">
-                                                        <i class="flaticon-pie-chart-1 text-info"></i>
-                                                    </div>
-                                                    <div class="navi-text">
-                                                        <div class="font-weight-bold">New user feedback received</div>
-                                                        <div class="text-muted">8 hrs ago</div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <a href="#" class="navi-item">
-                                                <div class="navi-link">
-                                                    <div class="navi-icon mr-2">
-                                                        <i class="flaticon2-settings text-success"></i>
-                                                    </div>
-                                                    <div class="navi-text">
-                                                        <div class="font-weight-bold">System reboot has been successfully completed</div>
-                                                        <div class="text-muted">12 hrs ago</div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <a href="#" class="navi-item">
-                                                <div class="navi-link">
-                                                    <div class="navi-icon mr-2">
-                                                        <i class="flaticon-safe-shield-protection text-primary"></i>
-                                                    </div>
-                                                    <div class="navi-text">
-                                                        <div class="font-weight-bold">New order has been placed</div>
-                                                        <div class="text-muted">15 hrs ago</div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <a href="#" class="navi-item">
-                                                <div class="navi-link">
-                                                    <div class="navi-icon mr-2">
-                                                        <i class="flaticon2-notification text-primary"></i>
-                                                    </div>
-                                                    <div class="navi-text">
-                                                        <div class="font-weight-bold">Company meeting canceled</div>
-                                                        <div class="text-muted">19 hrs ago</div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <a href="#" class="navi-item">
-                                                <div class="navi-link">
-                                                    <div class="navi-icon mr-2">
-                                                        <i class="flaticon2-fax text-success"></i>
-                                                    </div>
-                                                    <div class="navi-text">
-                                                        <div class="font-weight-bold">New report has been received</div>
-                                                        <div class="text-muted">23 hrs ago</div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <a href="#" class="navi-item">
-                                                <div class="navi-link">
-                                                    <div class="navi-icon mr-2">
-                                                        <i class="flaticon-download-1 text-danger"></i>
-                                                    </div>
-                                                    <div class="navi-text">
-                                                        <div class="font-weight-bold">Finance report has been generated</div>
-                                                        <div class="text-muted">25 hrs ago</div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <a href="#" class="navi-item">
-                                                <div class="navi-link">
-                                                    <div class="navi-icon mr-2">
-                                                        <i class="flaticon-security text-warning"></i>
-                                                    </div>
-                                                    <div class="navi-text">
-                                                        <div class="font-weight-bold">New customer comment recieved</div>
-                                                        <div class="text-muted">2 days ago</div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <a href="#" class="navi-item">
-                                                <div class="navi-link">
-                                                    <div class="navi-icon mr-2">
-                                                        <i class="flaticon2-analytics-1 text-success"></i>
-                                                    </div>
-                                                    <div class="navi-text">
-                                                        <div class="font-weight-bold">New customer is registered</div>
-                                                        <div class="text-muted">3 days ago</div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane" id="topbar_notifications_logs" role="tabpanel">
-                                        <div class="d-flex flex-center text-center text-muted min-h-200px">All caught up!
-                                            <br />No new notifications.</div>
+                                    <div class="d-flex flex-center pt-7">
+                                        <a href="#" class="btn btn-light-primary font-weight-bold text-center">See All</a>
                                     </div>
                                 </div>
-                            </form>
-                        </div>
+                                <div class="tab-pane" id="topbar_notifications_events" role="tabpanel">
+                                    <div class="navi navi-hover scroll my-4" data-scroll="true" data-height="300" data-mobile-height="200">
+                                        <a href="#" class="navi-item">
+                                            <div class="navi-link">
+                                                <div class="navi-icon mr-2">
+                                                    <i class="flaticon2-line-chart text-success"></i>
+                                                </div>
+                                                <div class="navi-text">
+                                                    <div class="font-weight-bold">New report has been received</div>
+                                                    <div class="text-muted">23 hrs ago</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="navi-item">
+                                            <div class="navi-link">
+                                                <div class="navi-icon mr-2">
+                                                    <i class="flaticon2-paper-plane text-danger"></i>
+                                                </div>
+                                                <div class="navi-text">
+                                                    <div class="font-weight-bold">Finance report has been generated</div>
+                                                    <div class="text-muted">25 hrs ago</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="navi-item">
+                                            <div class="navi-link">
+                                                <div class="navi-icon mr-2">
+                                                    <i class="flaticon2-user flaticon2-line- text-success"></i>
+                                                </div>
+                                                <div class="navi-text">
+                                                    <div class="font-weight-bold">New order has been received</div>
+                                                    <div class="text-muted">2 hrs ago</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="navi-item">
+                                            <div class="navi-link">
+                                                <div class="navi-icon mr-2">
+                                                    <i class="flaticon2-pin text-primary"></i>
+                                                </div>
+                                                <div class="navi-text">
+                                                    <div class="font-weight-bold">New customer is registered</div>
+                                                    <div class="text-muted">3 hrs ago</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="navi-item">
+                                            <div class="navi-link">
+                                                <div class="navi-icon mr-2">
+                                                    <i class="flaticon2-sms text-danger"></i>
+                                                </div>
+                                                <div class="navi-text">
+                                                    <div class="font-weight-bold">Application has been approved</div>
+                                                    <div class="text-muted">3 hrs ago</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="navi-item">
+                                            <div class="navi-link">
+                                                <div class="navi-icon mr-2">
+                                                    <i class="flaticon2-pie-chart-3 text-warning"></i>
+                                                </div>
+                                                <div class="navinavinavi-text">
+                                                    <div class="font-weight-bold">New file has been uploaded</div>
+                                                    <div class="text-muted">5 hrs ago</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="navi-item">
+                                            <div class="navi-link">
+                                                <div class="navi-icon mr-2">
+                                                    <i class="flaticon-pie-chart-1 text-info"></i>
+                                                </div>
+                                                <div class="navi-text">
+                                                    <div class="font-weight-bold">New user feedback received</div>
+                                                    <div class="text-muted">8 hrs ago</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="navi-item">
+                                            <div class="navi-link">
+                                                <div class="navi-icon mr-2">
+                                                    <i class="flaticon2-settings text-success"></i>
+                                                </div>
+                                                <div class="navi-text">
+                                                    <div class="font-weight-bold">System reboot has been successfully completed</div>
+                                                    <div class="text-muted">12 hrs ago</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="navi-item">
+                                            <div class="navi-link">
+                                                <div class="navi-icon mr-2">
+                                                    <i class="flaticon-safe-shield-protection text-primary"></i>
+                                                </div>
+                                                <div class="navi-text">
+                                                    <div class="font-weight-bold">New order has been placed</div>
+                                                    <div class="text-muted">15 hrs ago</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="navi-item">
+                                            <div class="navi-link">
+                                                <div class="navi-icon mr-2">
+                                                    <i class="flaticon2-notification text-primary"></i>
+                                                </div>
+                                                <div class="navi-text">
+                                                    <div class="font-weight-bold">Company meeting canceled</div>
+                                                    <div class="text-muted">19 hrs ago</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="navi-item">
+                                            <div class="navi-link">
+                                                <div class="navi-icon mr-2">
+                                                    <i class="flaticon2-fax text-success"></i>
+                                                </div>
+                                                <div class="navi-text">
+                                                    <div class="font-weight-bold">New report has been received</div>
+                                                    <div class="text-muted">23 hrs ago</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="navi-item">
+                                            <div class="navi-link">
+                                                <div class="navi-icon mr-2">
+                                                    <i class="flaticon-download-1 text-danger"></i>
+                                                </div>
+                                                <div class="navi-text">
+                                                    <div class="font-weight-bold">Finance report has been generated</div>
+                                                    <div class="text-muted">25 hrs ago</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="navi-item">
+                                            <div class="navi-link">
+                                                <div class="navi-icon mr-2">
+                                                    <i class="flaticon-security text-warning"></i>
+                                                </div>
+                                                <div class="navi-text">
+                                                    <div class="font-weight-bold">New customer comment recieved</div>
+                                                    <div class="text-muted">2 days ago</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="navi-item">
+                                            <div class="navi-link">
+                                                <div class="navi-icon mr-2">
+                                                    <i class="flaticon2-analytics-1 text-success"></i>
+                                                </div>
+                                                <div class="navi-text">
+                                                    <div class="font-weight-bold">New customer is registered</div>
+                                                    <div class="text-muted">3 days ago</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="topbar_notifications_logs" role="tabpanel">
+                                    <div class="d-flex flex-center text-center text-muted min-h-200px">All caught up!
+                                        <br />No new notifications.</div>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                    <div class="topbar-item">
-                        <div class="btn btn-icon btn-clean btn-lg mr-1" id="kt_quick_panel_toggle">
+                </div>
+                <div class="topbar-item">
+                    <div class="btn btn-icon btn-clean btn-lg mr-1" id="kt_quick_panel_toggle">
 										<span class="svg-icon svg-icon-xl svg-icon-primary">
 											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
 												<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -405,40 +402,18 @@
 												</g>
 											</svg>
 										</span>
-                        </div>
                     </div>
-                    <div class="topbar-item">
-                        <div class="btn btn-icon btn-icon-mobile w-auto btn-clean d-flex align-items-center btn-lg px-2" id="kt_quick_user_toggle">
-                            <span class="text-muted font-weight-bold font-size-base d-none d-md-inline mr-1">Hi,</span>
-                            <span class="text-dark-50 font-weight-bolder font-size-base d-none d-md-inline mr-3">Sean</span>
-                            <span class="symbol symbol-lg-35 symbol-25 symbol-light-success">
+                </div>
+                <div class="topbar-item">
+                    <div class="btn btn-icon btn-icon-mobile w-auto btn-clean d-flex align-items-center btn-lg px-2" id="kt_quick_user_toggle">
+                        <span class="text-muted font-weight-bold font-size-base d-none d-md-inline mr-1">Hi,</span>
+                        <span class="text-dark-50 font-weight-bolder font-size-base d-none d-md-inline mr-3">Sean</span>
+                        <span class="symbol symbol-lg-35 symbol-25 symbol-light-success">
 											<span class="symbol-label font-size-h5 font-weight-bold">S</span>
 										</span>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
-            <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
-                <div class="container-fluid d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
-                    <div class="d-flex align-items-center flex-wrap mr-2">
-                        <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Dashboard</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="d-flex flex-column-fluid">
-                <div class="container">
-                </div>
-            </div>
-        </div>
-        <Footer></Footer>
     </div>
 </template>
-<script setup>
-defineProps({
-    name : String
-})
-</script>
-<style scoped>
-</style>
