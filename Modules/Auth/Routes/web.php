@@ -14,3 +14,8 @@ Route::middleware('guest')->group(function () {
     Route::get('login', [AuthenticatedSessionController::class, 'create']);
     Route::post('login', [AuthenticatedSessionController::class, 'store'])->middleware('throttle:5,1');
 });
+
+
+Route::get('home2' , function (){
+   return \Inertia\Inertia::render('Home');
+});
