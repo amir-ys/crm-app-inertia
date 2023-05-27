@@ -1,17 +1,33 @@
 <?php
+
+namespace Modules\Auth\Tests\Feature;
+
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\WithFaker;
+use Modules\User\Entities\User;
 use Tests\TestCase;
 
-/*
- * Use refresh database for truncate database for each test.
- */
-uses(RefreshDatabase::class);
+class RegisterTest extends TestCase
+{
+    use RefreshDatabase, WithFaker;
 
-/**
- * Use Testcase to add some requirements.
- */
-uses(TestCase::class);
+    protected static string $tableName = 'users';
 
-it('test register page can be rendered', function () {
-    $this->get(route('auth.register'))->assertOk();
-});
+    public function test_register_page_can_be_rendered(): void
+    {
+        $this->get(route('auth.showRegisterForm'))
+            ->assertOk();
+    }
+
+    public function test_new_user_can_be_registered(): void
+    {
+        $this->post(route('auth.register'), [
+            'name' => 'Test User',
+            'email' => 'test@example.com',
+            'password' => '12345678',
+            'password_confirmation' => '12345678',
+        ])->assertOk();
+
+        $this->assertAuthenticated();
+    }
+}

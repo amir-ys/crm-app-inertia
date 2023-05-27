@@ -1,19 +1,20 @@
 <?php
-use Illuminate\Foundation\Testing\RefreshDatabase;
+
+namespace $NAMESPACE$;
+
 use Tests\TestCase;
+use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 
-/*
- * Use refresh database for truncate database for each test.
- */
-uses(RefreshDatabase::class);
-
-/**
- * Use Testcase to add some requirements.
- */
-uses(TestCase::class);
-
-it(' ', function () {
-
-});
-
-
+class $CLASS$ extends TestCase
+{
+    /**
+     * A basic unit test example.
+     *
+     * @return void
+     */
+    public function testExample()
+    {
+        $this->assertTrue(true);
+    }
+}

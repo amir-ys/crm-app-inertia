@@ -1,19 +1,22 @@
 <?php
-use Illuminate\Foundation\Testing\RefreshDatabase;
+
+namespace $NAMESPACE$;
+
 use Tests\TestCase;
+use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 
-/*
- * Use refresh database for truncate database for each test.
- */
-uses(RefreshDatabase::class);
+class $CLASS$ extends TestCase
+{
+    /**
+     * A basic feature test example.
+     *
+     * @return void
+     */
+    public function testExample()
+    {
+        $response = $this->get('/');
 
-/**
- * Use Testcase to add some requirements.
- */
-uses(TestCase::class);
-
-it(' ', function () {
-
-});
-
-
+        $response->assertStatus(200);
+    }
+}
