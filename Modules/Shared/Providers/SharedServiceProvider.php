@@ -4,6 +4,7 @@ namespace Modules\Shared\Providers;
 
 use Illuminate\Database\Eloquent\Factory;
 use Illuminate\Support\ServiceProvider;
+use Modules\Shared\Console\MakeRepositoryCommand;
 
 class SharedServiceProvider extends ServiceProvider
 {
@@ -33,5 +34,8 @@ class SharedServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        $this->commands([
+            MakeRepositoryCommand::class
+        ]);
     }
 }
