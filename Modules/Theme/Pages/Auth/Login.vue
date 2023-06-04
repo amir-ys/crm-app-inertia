@@ -22,8 +22,7 @@ const form = useForm({
                     <h1 class="text-gray-800 fs-2qx fw-bold text-center mb-7">سامانه مدیریت مشتریان</h1>
                 </div>
             </div>
-            <div
-                class="d-flex flex-column-fluid flex-lg-row-auto justify-content-center justify-content-lg-end p-12 mt-10 order-0">
+            <div class="d-flex flex-column-fluid flex-lg-row-auto justify-content-center justify-content-lg-end p-12 mt-10 order-0">
                 <div class="bg-body d-flex flex-center rounded-4 w-md-600px p-10">
                     <div class="w-md-400px">
                         <div class="text-center mb-11">
@@ -79,7 +78,6 @@ const form = useForm({
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </template>
