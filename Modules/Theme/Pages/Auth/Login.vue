@@ -15,9 +15,15 @@ const form = useForm({
 <template>
     <div class="d-flex flex-column flex-root" id="kt_app_root">
         <div class="d-flex flex-column flex-lg-row flex-column-fluid">
-
+            <div class="d-flex flex-lg-row-fluid order-1">
+                <div class="d-flex flex-column flex-center pb-0 pb-lg-10 p-10 w-100">
+                    <img class="theme-dark-show mx-auto mw-100 w-150px w-lg-300px mb-10 mb-lg-20"
+                         src="/assets/media/auth/agency-dark.png" alt=""/>
+                    <h1 class="text-gray-800 fs-2qx fw-bold text-center mb-7">سامانه مدیریت مشتریان</h1>
+                </div>
+            </div>
             <div
-                class="d-flex flex-column-fluid flex-lg-row-auto justify-content-center justify-content-lg-end p-12 mt-10">
+                class="d-flex flex-column-fluid flex-lg-row-auto justify-content-center justify-content-lg-end p-12 mt-10 order-0">
                 <div class="bg-body d-flex flex-center rounded-4 w-md-600px p-10">
                     <div class="w-md-400px">
                         <div class="text-center mb-11">
@@ -55,13 +61,9 @@ const form = useForm({
 
                             </div>
 
-                            <!--end::Input group=-->
-                            <!--begin::Submit button-->
                             <div class="d-grid mb-10 mt-10">
                                 <button type="submit" id="kt_sign_in_submit" class="btn btn-primary">
-                                    <!--begin::Indicator label-->
                                     <span class="indicator-label"> ورود</span>
-                                    <!--end::Indicator label-->
                                 </button>
                             </div>
 
@@ -77,13 +79,7 @@ const form = useForm({
                     </div>
                 </div>
             </div>
-            <div class="d-flex flex-lg-row-fluid">
-                <div class="d-flex flex-column flex-center pb-0 pb-lg-10 p-10 w-100">
-                    <img class="theme-dark-show mx-auto mw-100 w-150px w-lg-300px mb-10 mb-lg-20"
-                         src="/metro/assets/media/auth/agency-dark.png" alt=""/>
-                    <h1 class="text-gray-800 fs-2qx fw-bold text-center mb-7">سامانه مدیریت مشتریان</h1>
-                </div>
-            </div>
+
         </div>
     </div>
 </template>
