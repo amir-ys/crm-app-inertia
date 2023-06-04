@@ -164,7 +164,11 @@ return [
         /*
        * module Service Providers...
        */
+        \Modules\Core\Providers\ModuleServiceProvider::class,
+        \Modules\Auth\Providers\AuthServiceProvider::class,
         \Modules\Theme\Providers\ThemeServiceProvider::class,
+        \Modules\Shared\Providers\SharedServiceProvider::class,
+        \Modules\User\Providers\UserServiceProvider::class,
 
         /*
          * Application Service Providers...

@@ -2,83 +2,55 @@
 
 namespace Modules\Core\Providers;
 
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
-use Nwidart\Modules\Laravel\Module;
 
 class ModuleServiceProvider extends ServiceProvider
 {
-    /**
-     * Bootstrap any application services.
-     *
-     * @return void
-     */
-    public function register(): void
+    private $moduleName;
+
+    private function modulePath($path): string
     {
-        $this->initModules();
+        return base_path("Modules/" . $this->moduleName . DIRECTORY_SEPARATOR . ltrim($path, '/'));
+    }
+    protected function initModules($moduleName): void
+    {
+        $this->moduleName = $moduleName;
+        $this->loadTranslations();
+        $this->loadMigrations();
+        $this->loadRoutes();
     }
 
-    /**
-     * Initialize specified list of modules.
-     *
-     * @note if module list not specified, all enabled modules will list.
-     *
-     * @return void
-     */
-    private function initModules(): void
+    protected function loadTranslations(): void
     {
-        $modules = $this->app['modules']->allEnabled();
+        $this->loadTranslationsFrom($this->modulePath('/Lang') , $this->moduleName);
+    }
 
-        foreach ($modules as $module) {
-            $this->loadTranslations($module);
-            $this->loadConfigs($module);
-            $this->loadMigrations($module);
+    protected function loadMigrations($path = null): void
+    {
+        $this->loadMigrationsFrom($path ?? $this->modulePath("/Database/Migrations"));
+    }
+
+    protected function loadRoutes($apiRoutes = false)
+    {
+        if (!app()->routesAreCached()) {
+            Route::middleware('web')
+                ->namespace("Modules\\$this->moduleName\\Http\\Controllers")
+                ->group($this->modulePath("/Routes/web.php"));
+        }
+
+        if ($apiRoutes){
+            $this->loadApiRoutes();
         }
     }
 
-    /**
-     * Load translations for the given module.
-     *
-     * @param Module $module
-     *
-     * @return void
-     */
-    private function loadTranslations(Module $module): void
+    protected function loadApiRoutes()
     {
-        $translationsPath = "{$module->getPath()}/Lang";
-        $this->loadTranslationsFrom($translationsPath, $module->get('alias'));
-    }
-
-    /**
-     * Load configs for the given module.
-     *
-     * @param Module $module
-     *
-     * @return void
-     */
-    private function loadConfigs(Module $module): void
-    {
-        collect(
-            [
-                'config' => "{$module->getPath()}/Config/config.php",
-                'permissions' => "{$module->getPath()}/Config/permissions.php",
-            ])
-            ->filter(function ($path) {
-                return file_exists($path);
-            })
-            ->each(function ($path, $filename) use ($module) {
-                $this->mergeConfigFrom($path, "{$module->get('alias')}.$filename");
-            });
-    }
-
-    /**
-     * Load migrations for the given module.
-     *
-     * @param Module $module
-     *
-     * @return void
-     */
-    private function loadMigrations(Module $module): void
-    {
-        $this->loadMigrationsFrom("{$module->getPath()}/Database/Migrations");
+        if (!app()->routesAreCached()) {
+            Route::middleware('api')
+                ->prefix('api')
+                ->namespace("Modules\\$this->moduleName\\Http\\Controllers")
+                ->group($this->modulePath("/Routes/api.php"));
+        }
     }
 }

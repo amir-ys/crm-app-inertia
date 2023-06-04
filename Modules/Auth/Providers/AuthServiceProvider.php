@@ -1,37 +1,20 @@
 <?php
 
+
 namespace Modules\Auth\Providers;
 
-use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Factory;
+use Modules\Core\Providers\ModuleServiceProvider;
 
-class AuthServiceProvider extends ServiceProvider
+class AuthServiceProvider extends ModuleServiceProvider
 {
-    /**
-     * @var string $moduleName
-     */
-    protected $moduleName = 'Auth';
+    public function register(): void
+    {
+        $this->initModules("Auth");
+    }
 
-    /**
-     * @var string $moduleNameLower
-     */
-    protected $moduleNameLower = 'auth';
-
-    /**
-     * Boot the application events.
-     *
-     * @return void
-     */
     public function boot()
     {
     }
 
-    /**
-     * Register the service provider.
-     *
-     * @return void
-     */
-    public function register()
-    {
-    }
 }

@@ -4,27 +4,16 @@ namespace Modules\Shared\Providers;
 
 use Illuminate\Database\Eloquent\Factory;
 use Illuminate\Support\ServiceProvider;
+use Modules\Core\Providers\ModuleServiceProvider;
 use Modules\Shared\Console\MakeRepositoryCommand;
 
-class SharedServiceProvider extends ServiceProvider
+class SharedServiceProvider extends ModuleServiceProvider
 {
-    /**
-     * @var string $moduleName
-     */
     protected $moduleName = 'Shared';
 
-    /**
-     * @var string $moduleNameLower
-     */
-    protected $moduleNameLower = 'shared';
-
-    /**
-     * Register the service provider.
-     *
-     * @return void
-     */
     public function register()
     {
+        $this->initModules($this->moduleName);
     }
 
     /**

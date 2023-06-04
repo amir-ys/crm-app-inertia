@@ -11,20 +11,7 @@ class CoreServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot(): void
+    public function register(): void
     {
-        $this->registerProviders();
-    }
-
-
-    /**
-     * Register providers
-     *
-     * @return void
-     */
-    protected function registerProviders(): void
-    {
-        $this->app->register("Modules\\Core\\Providers\\ModuleServiceProvider");
-        $this->app->register("Modules\\Core\\Providers\\ModuleRouteServiceProvider");
     }
 }

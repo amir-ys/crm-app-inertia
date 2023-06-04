@@ -2,35 +2,18 @@
 
 namespace Modules\User\Providers;
 
-use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Factory;
+use Modules\Core\Providers\ModuleServiceProvider;
 
-class UserServiceProvider extends ServiceProvider
+class UserServiceProvider extends ModuleServiceProvider
 {
-    /**
-     * @var string $moduleName
-     */
-    protected $moduleName = 'User';
+    protected string $moduleName = 'User';
 
-    /**
-     * @var string $moduleNameLower
-     */
-    protected $moduleNameLower = 'user';
-
-    /**
-     * Boot the application events.
-     *
-     * @return void
-     */
     public function boot()
     {
+        $this->initModules($this->moduleName);
     }
 
-    /**
-     * Register the service provider.
-     *
-     * @return void
-     */
     public function register()
     {
     }
