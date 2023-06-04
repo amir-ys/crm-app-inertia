@@ -14,7 +14,6 @@ Route::middleware('guest')->group(function () {
     Route::get('login', [AuthenticatedSessionController::class, 'create'])->name('auth.showLoginForm');
     Route::post('login', [AuthenticatedSessionController::class, 'store'])
         ->name('auth.login');
-//        ->middleware('throttle:5,1');
 
 });
 
